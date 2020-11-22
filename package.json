@@ -1,0 +1,28 @@
+{
+  "name": "usf-parse-helpers",
+  "version": "1.0.0",
+  "description": "function helpers to extract values and units from a string",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/US-Fabrics/usf-parse-helpers.git"
+  },
+  "keywords": [
+    "string",
+    "parse",
+    "units",
+    "scientific"
+  ],
+  "author": "usf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/US-Fabrics/usf-parse-helpers/issues"
+  },
+  "homepage": "https://github.com/US-Fabrics/usf-parse-helpers#readme",
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}
