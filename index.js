@@ -9,6 +9,14 @@ let printMsg = function () {
 let isNumeric = (str) => {
     return /^\d+$/.test(str);
 }
+
+let getSuperscriptContents = (str) => {
+    let matches = str.match(/<sup>(.*?)<\/sup>/g);
+    return matches ? matches.map(function (val) {
+        return val.replace(/<\/?sup>/g, '');
+    }) : undefined;
+}
+
 let stripSupercript = (str) => {
     str = str.replace("<sup>-1</sup>", '');
     str = str.replace("<sup>1</sup>", '');
@@ -22,6 +30,8 @@ let stripSupercript = (str) => {
     str = str.replace("<sup>(4)</sup>", '');
     str = str.replace("<sup>(5)</sup>", '');
     str = str.replace("<sup>(1,2)</sup>", '');
+    str = str.replace("<sub>", ' ');
+    str = str.replace("</sub>", ' ');
     return str;
 }
 
@@ -85,5 +95,6 @@ module.exports = {
     isNumeric,
     fixSupercript,
     stripSupercript,
-    parseResult
+    parseResult,
+    getSuperscriptContents
 }
