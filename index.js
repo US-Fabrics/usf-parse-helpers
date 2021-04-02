@@ -18,9 +18,7 @@ let getSuperscriptContents = (str) => {
 }
 
 let makeURL = (str) => {
-    str = str.replace(" ", "-")
-    str = str.toLowerCase();
-    str = str.trim();
+    str = str.replace(/\s+/g, '-').toLowerCase().trim();
     str = str.replace(/[^a-zA-Z0-9\-]/g, '');
     return str;
 }
