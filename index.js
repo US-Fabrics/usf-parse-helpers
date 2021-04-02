@@ -21,7 +21,7 @@ let makeURL = (str) => {
     str = str.replace(" ", "-")
     str = str.toLowerCase();
     str = str.trim();
-    str = str.replace(/[^a-zA-Z0-9-_]/g, '');
+    str = str.replace(/[^a-zA-Z0-9\-]/g, '');
     return str;
 }
 
