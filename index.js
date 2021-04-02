@@ -17,6 +17,15 @@ let getSuperscriptContents = (str) => {
     }) : undefined;
 }
 
+let makeURL = (str) => {
+    str = str.replace("  ", " ");
+    str = str.replace(" ", "-")
+    str = str.toLowerCase();
+    str = str.replace(/[^a-zA-Z0-9-_]/g, '');
+    str = str.trim();
+    return str;
+}
+
 let stripSupercript = (str) => {
     str = str.replace("<sup>-1</sup>", '');
     str = str.replace("<sup>1</sup>", '');
@@ -96,5 +105,6 @@ module.exports = {
     fixSupercript,
     stripSupercript,
     parseResult,
-    getSuperscriptContents
+    getSuperscriptContents,
+    makeURL
 }
